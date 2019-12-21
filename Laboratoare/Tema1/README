@@ -1,0 +1,39 @@
+/*
+ *  ****************************************************************************
+ *  Copyright 2019 Vlad-Stefan Dieaconu
+ *  None Rights Reserved.
+ *
+ *  NOTICE:  All information contained herein is Open Source. You can
+ * 	modify it in any way without having to ask for permission.
+ *
+ * 	Original publisher: https://github.com/vladstefandieaconu
+ *  ****************************************************************************
+ */
+
+Tema 1 - EGC
+
+In realizarea temei am pornit folosind rezolvari ale laboratoarelor 2 si 4, pe
+care le-am adaptat pentru un joc 2D. Toate operatiile folosesc 0 pe axa Z pentru
+a simula operatii in mediul 2D. Uneori in translatii folosesc si axa Z, pentru a
+fii sigur ce element apare primul in plan. Spre exemplu vreau sa fiu sigur ca in
+cazul in care pasarea se loveste de pipe-uri, se va vedea textura pipe-ului, ci
+nu a pasarii, asa ca pipe-urile sunt randate la un Z mai mare.
+
+Pasarea este construita din triunghiuri si patrate. Pentru a anima pasarea cum
+da din aripi am facut 2 meshe diferite, intre care schimb la fiecare 5 frame-uri
+
+Pipe-urile sunt construite random, pentru a nu te putea obisnui cu locul unde se
+va afla un pipe. Cand un pipe iese din scena, il randez in partea dreapta a
+ecranului.
+
+Pentru statistici si coliziuni compar locul unde se afla pasarea mea cu locul
+unde se afla fiecare dintre pipe-urile create, pentru a vedea daca se suprapun
+Este intuitiv intrucat pasarea sta mereu pe acelasi X, iar pe Y ea are coordonata
+gravity, ce scade constant pentru a simula gravitatea, si creste atunci cand
+apas tasta SPACE, pentru a simula o saritura.
+
+In afara de cerintele obligatorii ale temei, am incercat sa rezolv dintre
+BONUSURI urmatoarele cerinte:
+- Animatie care sa simuleze modul prin care pasarea da din aripi
+- (5p-10p) Scena cat mai realista (perechile de stalactite si stalagmite sa fie
+in mai multe culori, din forme mai complexe, pasarea sa arate ca o pasare)
